@@ -23,6 +23,7 @@ fun main (args: Array<String>)
             }
     }
     }
+
     else if ((!recursive) && (args[0] == "-d")) {
         path = args[1]
         naming = args[2]
@@ -33,7 +34,7 @@ fun main (args: Array<String>)
             }
         }
     }
-    else {
+    if (naming == "" || path == "") {
         println("Чтобы программа работала корректно нужно ввести: [-r](опционально) [-d directory] %filename")
         throw IllegalArgumentException()
     }
